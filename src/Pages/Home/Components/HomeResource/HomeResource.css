@@ -1,0 +1,63 @@
+.homeresource-container {
+    margin-top: 80px;
+    min-height: 90vh;
+}
+
+.cards {
+    flex-wrap: wrap;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 50px 100px;
+}
+
+.resource-card-image {
+    margin-top: -50px;
+    margin-left: 20px;
+    width: fit-content;
+    background-color: white;
+    border-radius: 50%;
+    /* border: 1px solid lightgray; */
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.resources-title {
+    text-align: center;
+    font-size: 40px;
+    color: #1e7bed;
+    width: fit-content;
+    border-bottom: 2px solid #ff9a43;
+    margin: 0 auto;
+}
+
+.resource-card {
+    flex-shrink: 0;
+    min-height: 300px;
+    width: 400px;
+    margin-top: 40px ;
+    border: #e6e6e6 solid 2px;
+    box-shadow: rgba(73, 73, 73, 0.25) 0px 25px 50px -12px,rgba(102, 101, 101, 0.25) -20px 0px 36px -28px inset;
+    
+}
+
+.resource-card-title {
+    margin-left: 30px;
+    color: #1e7bed;
+}
+
+.resource-card-description {
+    color: #1e7bed;
+    padding: 50px 30px ;
+    font-size: 15px;
+}
+
+
+
+#fontsize{
+    font-size: 17px!important;
+}

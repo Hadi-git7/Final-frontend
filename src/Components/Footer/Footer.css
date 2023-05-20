@@ -1,0 +1,130 @@
+.footer-logo {
+    margin-left: 1rem;
+    color: #1e7bed;
+  }
+  
+  .footer-container {
+    display: flex;
+    padding: 40px;
+  }
+  
+  .footer-left,
+  .footer-middle,
+  .footer-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  
+  .footer-left {
+    flex-basis: 70px; /* Adjust the value to make it smaller */
+
+  }
+  
+  .footer-middle {
+    flex-basis: 70px; /* Adjust the value to make it smaller */
+    align-items: center;
+
+  }
+
+  .footer-links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    border-bottom: none;
+    color: #1e7bed;
+    line-height: 30px;
+  }
+
+  .footer-links:hover {
+    position: relative;
+  }
+  
+  .footer-links:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    width: 100%;
+    height: 2px;
+    background-color: #ff9a43;
+    transition: width 0.5s ease;
+  }
+  
+  .footer-links:hover::after {
+    width: 100%;
+  }
+  
+  .fm-title{
+    color: #ff9a43;
+  }
+  .footer-right {
+    flex-basis: 20px; /* Adjust the value to make it smaller */
+  }
+
+   .rm-title{
+    color: #ff9a43;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .footer-left-p {
+    align-items: flex-start;
+    margin: 0;
+    padding-left: 0.5rem; /* Increase the space between text and vertical lines */
+    color: #1e7bed;
+  }
+
+  .footer-right-p {
+    align-items: flex-start;
+    margin: 0;
+    padding-left: 0.5rem; /* Increase the space between text and vertical lines */
+    color: #1e7bed;
+  }
+  
+  .login-button-footer button{
+    width: 4rem;
+    height: 2rem;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #1e7bed;
+    border-color: #1e7bed;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+  .login-button-footer button:hover {
+    background-color: #1739bfb9;
+    color: #fff;
+  }
+
+  .vertical-line{
+    width: 1px;
+    background-color: #1e7bed;
+    margin-top: 35px;
+  }
+
+  .donate-button-footer{
+    display: flex;
+    justify-content: center;
+  }
+
+  .donate-button-footer button{
+    width: 8rem;
+    height: 2.5rem;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #1e7bed;
+    border-color: #1e7bed;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 17px;
+  }
+
+  .donate-button-footer button:hover {
+    background-color: #1739bfb9;
+    color: #fff;
+  }
