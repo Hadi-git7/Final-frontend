@@ -1,0 +1,48 @@
+#activity-orange {
+    color: #ff9a43;
+}
+
+#younger-children {
+    margin-top: 120px;
+}
+
+.acitivity-content {
+    margin-top: 100px;
+
+}
+
+#activity-content-description {
+    font-size: 17px;
+}
+
+#activity-span {
+    border-bottom: 2px solid #ff9a43;
+}
+
+#acitivity-content-title {
+    color: #1e7bed;
+}
+
+
+
+#activity-text {
+    padding: 30px 0;
+}
+
+#activity-header {
+    margin-bottom: 50px;
+}
+
+.activity-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .activity-img img {
+    height: 24vw;
+    width: 45vw;
+    display: block;
+    margin: 0 auto;
+  }
+  

@@ -1,7 +1,7 @@
 import React from 'react'
 import './HomeLanding.css'
 import Smiley from './smileyyy.png'
-import Child from './cutebby.png'
+import peter from './petarr.png'
 import Butterfly from './butterfly.png'
 function HomeLanding() {
 
@@ -18,7 +18,7 @@ function HomeLanding() {
           <img className='butterfly' src={Butterfly} alt='butterfly'/>
         </div>
         <div className="right-image">
-        <img src={Child} alt='child' className='Child'/>
+        <img src={peter} alt='child' className='Child'/>
         </div>
       </div>
     </div>

@@ -1,0 +1,37 @@
+.resources-contentt{
+    /* display: flex; */
+    justify-content: center;
+    padding: 2vw 0;
+}
+
+.resource-pic {
+    display: flex;
+    justify-content: center;
+}
+
+.resource-pic img{
+    height: 20vw;
+    width: 40vw;
+padding-bottom: 2vw;}
+
+.resource-desc{
+    padding: 3vw 19vw;
+    font-size: 1.3rem;
+    align-self: center;
+    background-color: #1e7bed;
+    color: white;
+    
+}
+
+.scroll-resource{
+    display: flex;
+    justify-content: center;
+    padding: 2vw 0;
+    color: #1e7bed;
+    text-decoration: none;
+    font-size: 3rem;
+}
+
+.scroll-resource:hover{
+    color: #ff9a43 ;
+}

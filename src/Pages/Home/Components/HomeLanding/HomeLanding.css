@@ -1,63 +1,132 @@
 .landing-container{
     display: flex;
     width: 100%;
-    height: 92vh;
+    height: 100%;
+    margin-top: 20px;
 }
 
 .left-landing{
+    display: flex;
+    flex-direction: column;
     width: 50%;
+    height: 94vh;
+
 }
 
 .right-landing{
+    display: flex;
+    flex-direction: column;
     width: 50%;
     background-color: #faf5ec;
     border-bottom-left-radius: 200px;
     border-top-left-radius: 200px;
-
+    height: 94vh;
 }
 
 .landing-title{
-    font-size: 50px;
+    font-size: 3.5vw;
+    height: 50vh;
     padding: 80px 60px 20px 60px;
     color: #1e7bed;
 }
 
 .Smiley{
-    margin-left: -130px;
+    width: 35vw;
+    height: 45vh;
     transform: rotate(20deg);
-   object-fit: contain;
-
+     object-fit: contain;
 }
 
 .Child{
     position: absolute;
     bottom: 50px;
-    object-fit: contain;
-    width: 30vw;
+    width: 35vw;
     height: 45vh;
-
+    object-fit: contain;
+    left:25%
 }
 
 .right-image{
     display: flex;
+    position: relative;
     justify-content: center;
+    width: 30vw;
+    height: 45vh;
 }
 
 .rcp{
     color: #1e7bed;
-    margin-top: 30px;
+    margin-top: 0px;
+    font-size: 1.2vw;
     text-align: center;
 }
 
 .content{
     display: flex;
     margin-top: 30px;
-    padding: 100px;
+    padding: 70px;
 }
 
 .butterfly{
     width: 150px;
     height: 150px;
     margin-top: 0px;
+}
 
+@media screen and (max-width:1150px) {
+    .landing-title{
+        height: 45vh;
+    }
+
+    .rcp{
+        font-size: 1.4vw;
+    }
+    
+}
+
+@media  screen and (max-width:900px) {
+    .landing-container{
+        flex-direction: column;
+    }
+    .left-landing{
+        display: flex;
+        flex-direction: row;
+        background-color: #faf5ec;
+        border-bottom-left-radius: 200px;
+        width: 100vw;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        height: 47vh;
+    }
+    .landing-title{
+        width: 60vw;
+        font-size: 4vw;
+    }
+    .right-landing{
+        width: 100vw;
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width:700px){
+    .landing-title{
+        width: 60vw;
+        font-size: 4.2vw;
+    }
+    .left-landing{
+        display: flex;
+        flex-direction: row;
+        background-color: #faf5ec;
+        border-bottom-left-radius: 200px;
+        width: 100vw;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        height: 41vh;
+    }
+}
+
+@media screen and (max-width:500px) {
+    
+    
 }

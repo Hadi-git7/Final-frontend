@@ -13,8 +13,8 @@ function App() {
     <>
    <BrowserRouter>
    <Routes>
-    <Route path='/' element={<UserLayout/>}>
-      <Route path='/home' element={<Home/>} />
+    <Route  element={<UserLayout/>}>
+      <Route path='/' element={<Home/>} />
       <Route path='/activity' element={<Activity/>} />
       <Route path='/blog' element={<Blog/>} />
       <Route path='/resource' element={<Resource/>} />
