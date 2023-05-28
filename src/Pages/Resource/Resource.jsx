@@ -6,7 +6,6 @@ import 'aos/dist/aos.css'
 import { NavLink } from 'react-router-dom';
 import { BsFillArrowDownCircleFill } from 'react-icons/bs';
 
-
 function Resource() {
 
   const [resource, setResource] = useState([]);
@@ -25,7 +24,6 @@ function Resource() {
     try {
       const response = await fetch('http://localhost:5000/api/resource');
       const res = await response.json();
-      console.log(res)
       setResource(res)
     } catch (err) {
       console.log(err)
@@ -43,10 +41,10 @@ function Resource() {
       <h1 className='resources-title' data-aos="fade-down" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="800">Resources</h1>
       <div className='resources-contentt'>
         <div className='resource-pic'>
-          <img src={resource[0].generalImage.url} alt='resource' />
+          <img src={resource[0]?.generalImage.url} alt='resource' />
         </div>
         <div className='resource-desc'>
-          <p>{resource[0].description}
+          <p>{resource[0]?.description}
           </p>
         </div>
         <a href='#resource-cardss' className='scroll-resource'>Scroll Down  <BsFillArrowDownCircleFill style={{ color: '#ff9a43', marginTop: '10px', marginRight: '10px' }} />

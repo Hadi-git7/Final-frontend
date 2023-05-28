@@ -1,4 +1,4 @@
-.resources-contentt{
+.resources-contentt {
     /* display: flex; */
     justify-content: center;
     padding: 2vw 0;
@@ -9,21 +9,22 @@
     justify-content: center;
 }
 
-.resource-pic img{
+.resource-pic img {
     height: 20vw;
     width: 40vw;
-padding-bottom: 2vw;}
+    padding-bottom: 2vw;
+}
 
-.resource-desc{
-    padding: 3vw 19vw;
+.resource-desc {
+    padding: 2vw 19vw;
     font-size: 1.3rem;
     align-self: center;
     background-color: #1e7bed;
     color: white;
-    
+
 }
 
-.scroll-resource{
+.scroll-resource {
     display: flex;
     justify-content: center;
     padding: 2vw 0;
@@ -32,6 +33,6 @@ padding-bottom: 2vw;}
     font-size: 3rem;
 }
 
-.scroll-resource:hover{
-    color: #ff9a43 ;
+.scroll-resource:hover {
+    color: #ff9a43;
 }

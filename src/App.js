@@ -6,7 +6,9 @@ import Activity from './Pages/Activity/Activity'
 import Blog from './Pages/Blog/Blog'
 import Resource from './Pages/Resource/Resource'
 import Overview from './Pages/Overview/Overview'
+import Login from './Pages/Login/Login'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import Dashboard from './Pages/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -20,6 +22,9 @@ function App() {
       <Route path='/resource' element={<Resource/>} />
       <Route path='/overview' element={<Overview/>} />
     </Route>
+    <Route path='/login' element={<Login/>} />
+    <Route path='/dashboard/*' element={<Dashboard/>} />
+
    </Routes>
    </BrowserRouter>
     </>

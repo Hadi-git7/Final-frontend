@@ -12,7 +12,6 @@ function HomeActivity() {
     try {
       const response = await fetch('http://localhost:5000/api/younger');
       const res = await response.json();
-      console.log(res);
       setActivity(res);
     } catch (err) {
       console.log(err);

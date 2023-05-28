@@ -20,7 +20,7 @@ function Navbar() {
             <NavLink to='/activity' onClick={()=>setShow(false)}>Activities</NavLink>
             <NavLink to='/blog' onClick={()=>setShow(false)}>Blogs</NavLink>
             <div className='login-button' onClick={()=>setShow(false)}>
-              <button >LogIn</button>
+              <NavLink  to='/login' onClick={()=>setShow(false)}><button >LogIn</button></NavLink>
             </div>
         </div>
         <button className='Ham'  onClick={openMenu}> <FaBars className='Ham'/></button>

@@ -1,24 +1,38 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './HomeLanding.css'
-import Smiley from './smileyyy.png'
-import peter from './petarr.png'
-import Butterfly from './butterfly.png'
+
 function HomeLanding() {
+  const [landing , setLanding] = useState('')
+
+
+  const Request = async () => {
+    try {
+      const response = await fetch('http://localhost:5000/api/home');
+      const res = await response.json();
+      setLanding(res);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  useEffect(() => {
+    Request();
+  }, []);
 
   return (
     <div className='landing-container'>
       <div className="left-landing">
-        <h1 className='landing-title'>Welcome to a world of love, laughter, and endless fun especially designed for brave hearts with Dravet Syndrome!</h1>
-        <img src={Smiley} alt='smiley' className='Smiley'/>
+        <h1 className='landing-title'>{landing[0]?.introduction}</h1>
+        <img src={landing[0]?.firstImage.url} alt='smiley' className='Smiley'/>
       </div>
       <div className="right-landing">
         <div className="content">
-          <p className='rcp'>Dravet syndrome is an intractable developmental and epileptic encephalopathy that begins in infancy and proceeds with accumulating morbidity that significantly impacts individuals throughout their lifetime. Dravet syndrome is a rare disease, with an estimated incidence rate of 1:15,700, with the majority of patients carrying a mutation in the sodium channel gene SCN1A.
+          <p className='rcp'>{landing[0]?.description}
           </p>
-          <img className='butterfly' src={Butterfly} alt='butterfly'/>
+          <img className='butterfly' src={landing[0]?.secondImage.url} alt='butterfly'/>
         </div>
         <div className="right-image">
-        <img src={peter} alt='child' className='Child'/>
+        <img src={landing[0]?.thirdImage.url} alt='child' className='Child'/>
         </div>
       </div>
     </div>

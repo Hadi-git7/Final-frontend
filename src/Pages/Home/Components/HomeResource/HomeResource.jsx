@@ -13,7 +13,6 @@ function HomeResource() {
     try {
       const response = await fetch('http://localhost:5000/api/resource');
       const res = await response.json();
-      console.log(res)
       setResource(res)
     } catch (err) {
       console.log(err)
