@@ -1,5 +1,4 @@
 .footer-logo {
-  margin-left: 1rem;
   color: #1e7bed;
 }
 
@@ -39,6 +38,8 @@
   border-bottom: none;
   color: #1e7bed;
   line-height: 30px;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .footer-links:hover {
@@ -78,7 +79,6 @@
 .footer-left-p {
   align-items: flex-start;
   margin: 0;
-  padding-left: 0.5rem;
   /* Increase the space between text and vertical lines */
   color: #1e7bed;
 }

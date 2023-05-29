@@ -1,13 +1,19 @@
 import React, { useState } from 'react'
 import './Navbar.css'
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { FaBars } from "react-icons/fa";
 
 function Navbar() {
+  let navigate = useNavigate()
   const [show, setShow] = useState(false)
 
   function openMenu(){
     setShow(!show)
+  }
+
+  function navDeactive(){
+    setShow(false)
+    navigate('/login')
   }
   return (
     <div className='Navbar-container'>
@@ -19,9 +25,7 @@ function Navbar() {
             <NavLink to='/resource' onClick={()=>setShow(false)}>Resources</NavLink>
             <NavLink to='/activity' onClick={()=>setShow(false)}>Activities</NavLink>
             <NavLink to='/blog' onClick={()=>setShow(false)}>Blogs</NavLink>
-            <div className='login-button' onClick={()=>setShow(false)}>
-              <NavLink  to='/login' onClick={()=>setShow(false)}><button >LogIn</button></NavLink>
-            </div>
+            <button className='login-button'onClick={navDeactive}>LogIn</button>
         </div>
         <button className='Ham'  onClick={openMenu}> <FaBars className='Ham'/></button>
 

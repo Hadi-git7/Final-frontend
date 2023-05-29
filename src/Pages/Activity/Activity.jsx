@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import './Activity.css'
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import 'aos/dist/aos.css'
-import { NavLink } from 'react-router-dom';
 import Aos from 'aos';
 import activity from './activityy-dsff.jpg'
 
@@ -136,7 +135,6 @@ function Activity() {
               })}
 
             <div className='activity-div-button'>
-              <NavLink to='/activity'>
                 <button className='activity-button' onClick={() => {
                   showMoreYounger();
                   setShowYounger(!showYounger);
@@ -149,7 +147,6 @@ function Activity() {
                   <div className='activity-button__drow1'></div>
                   <div className='activity-button__drow2'></div>
                 </button>
-              </NavLink>
             </div>
 
           </div>
@@ -176,7 +173,6 @@ function Activity() {
               })}
 
             <div className='activity-div-button'>
-              <NavLink to='/activity'>
                 <button className='activity-button' onClick={() => {
                   showMoreOlder();
                   setShowOlder(!showOlder);
@@ -189,7 +185,6 @@ function Activity() {
                   <div className='activity-button__drow1'></div>
                   <div className='activity-button__drow2'></div>
                 </button>
-              </NavLink>
             </div>
           </div>
         </div>
@@ -218,7 +213,6 @@ function Activity() {
               })}
 
             <div className='activity-div-button'>
-              <NavLink to='/activity'>
                 <button className='activity-button' onClick={() => {
                   showMoreFamily();
                   setShowFamily(!showFamily);
@@ -231,7 +225,6 @@ function Activity() {
                   <div className='activity-button__drow1'></div>
                   <div className='activity-button__drow2'></div>
                 </button>
-              </NavLink>
             </div>
           </div>
           </div>

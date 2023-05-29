@@ -5,6 +5,8 @@ import Aos from 'aos';
 import 'aos/dist/aos.css'
 import { NavLink } from 'react-router-dom';
 import { BsFillArrowDownCircleFill } from 'react-icons/bs';
+import resourcepic from './dravetsmile.jpg';
+
 
 function Resource() {
 
@@ -20,15 +22,15 @@ function Resource() {
       setVisibleResources((prevValue) => prevValue - resource.length);
     }
   };
+
   const Request = async () => {
     try {
       const response = await fetch('http://localhost:5000/api/resource');
       const res = await response.json();
-      setResource(res)
+      setResource(res);
     } catch (err) {
       console.log(err)
     }
-
   }
 
   useEffect(() => {
@@ -41,10 +43,10 @@ function Resource() {
       <h1 className='resources-title' data-aos="fade-down" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="800">Resources</h1>
       <div className='resources-contentt'>
         <div className='resource-pic'>
-          <img src={resource[0]?.generalImage.url} alt='resource' />
+          <img src={resourcepic} alt='resource' />
         </div>
         <div className='resource-desc'>
-          <p>{resource[0]?.description}
+          <p>We help you to address the challenges of living with Dravet syndrome through a variety of resources and support options.We want you to know you’re not alone. Our mission is to aggressively raise funds for Dravet syndrome and related epilepsies; to support and fund research; increase awareness; and to provide support to affected individuals and families.
           </p>
         </div>
         <a href='#resource-cardss' className='scroll-resource'>Scroll Down  <BsFillArrowDownCircleFill style={{ color: '#ff9a43', marginTop: '10px', marginRight: '10px' }} />

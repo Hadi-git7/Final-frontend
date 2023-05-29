@@ -93,7 +93,7 @@
         flex-direction: row;
         background-color: #faf5ec;
         border-bottom-left-radius: 200px;
-        width: 100vw;
+        width: 100%;
         overflow-x: hidden;
         overflow-y: hidden;
         height: 47vh;
