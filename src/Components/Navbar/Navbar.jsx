@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './Navbar.css'
 import { NavLink, useNavigate } from 'react-router-dom';
 import { FaBars } from "react-icons/fa";
-
+import logo from './Dravet Syndrome.png'
 function Navbar() {
   let navigate = useNavigate()
   const [show, setShow] = useState(false)
@@ -18,11 +18,11 @@ function Navbar() {
   return (
     <div className='Navbar-container'>
 
-      <h2 className='Navbar-logo'>LOGO</h2>
+     <NavLink to='/' className="activee"> <img src={logo} className='Navbar-logo' alt='logo' /></NavLink>
         <div className={show ? 'links_wrapper nzale' : 'links_wrapper'}>
             <NavLink to='/' onClick={()=>setShow(false)}>Home</NavLink>
             <NavLink to='/overview' onClick={()=>setShow(false)}>Get Informed</NavLink>
-            <NavLink to='/resource' onClick={()=>setShow(false)}>Resources</NavLink>
+            <NavLink to='/resource' onClick={()=>setShow(false)}>Caregivers</NavLink>
             <NavLink to='/activity' onClick={()=>setShow(false)}>Activities</NavLink>
             <NavLink to='/blog' onClick={()=>setShow(false)}>Blogs</NavLink>
             <button className='login-button'onClick={navDeactive}>LogIn</button>

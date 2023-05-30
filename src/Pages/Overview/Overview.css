@@ -1,0 +1,130 @@
+.hero-overview-container {
+    display: flex;
+    justify-content: center;
+    height: 25vw;
+
+}
+
+
+
+.hero-overview-image img {
+    width: 100%;
+    height: 25vw;
+
+}
+
+.hero-overview-image {
+    height: 25vw;
+    width: 50%;
+}
+
+.hero-overview-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1e7bed;
+    color: white;
+    width: 50%;
+    justify-content: center;
+}
+
+.hero-overview-content-p {
+    padding: 2rem 4rem;
+    text-align: center;
+    font-size: 1rem;
+
+}
+
+.hero-overview-content-h2 {
+    border-bottom: 2px solid #ff9a43;
+    padding-bottom: 1rem;
+    /* Adjust the value to increase or decrease the space */
+
+}
+
+.info-content {
+    padding: 4vw 25vw;
+    
+}
+
+.diagnosis {
+    padding: 3vw;
+    background-color: #ebf6fa;
+}
+
+.diagnosis-title-h3 {
+    text-align: center;
+    padding-bottom: 2rem;
+    color: #1e7bed;
+}
+
+.diagnosis-title-h4 {
+
+    color: #1e7bed;
+}
+
+.diagnosis-paragraph {
+    font-weight: 300;
+    padding-top: 1vw;
+}
+
+
+.diagnosis-graph img {
+    width: 50vw;
+}
+
+.dravet-definition-title-small {
+    text-align: center;
+    margin: 0;
+    color: #ff9a43;
+}
+
+.dravet-definition-title-big {
+    text-align: center;
+    color: #1e7bed;
+}
+
+.dravet-definition-text {
+    margin-top: 2vw;
+    font-weight: 300;
+}
+
+.bold-text {
+    font-weight: 700;
+}
+
+.light-text {
+    font-weight: 300;
+}
+
+.below-diagnosis {
+    background-color: #ebf6fa;
+    padding: 3vw;
+}
+
+.lists {
+    padding: 0 3vw;
+}
+
+.orange-span {
+    color: #ff9a43;
+    font-weight: 700;
+
+}
+
+.genetic-testing-container {
+    padding: 3vw 0;
+}
+
+.genetic-testing-title {
+    color: #1e7bed;
+}
+
+.genetic-testing-text{
+    padding-top: 2vw;
+}
+
+.refernces{
+    color: #1e7bed;
+    font-size: 0.9rem;
+}

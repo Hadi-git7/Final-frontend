@@ -3,6 +3,7 @@ import './Footer.css'
 import { NavLink } from 'react-router-dom';
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import 'aos/dist/aos.css'
+import logo from '../Navbar/Dravet Syndrome.png'
 
 
 
@@ -12,7 +13,7 @@ function Footer() {
       <div className="footer-left" data-aos="fade-down"
      data-aos-easing="linear"
      data-aos-duration="1500">
-        <h2 className='footer-logo'>LOGO</h2>
+       <NavLink to='/'><img src={logo} alt='logo' className='footer-logo'/></NavLink> 
         <p className='footer-left-p'>In the hearts of many, Dravet syndrome children are cherished and embraced with an overflowing love that celebrates their unique spirit and resilience.</p>
         <br/>
         <br />

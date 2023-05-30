@@ -3,10 +3,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
+  width: 100%;
   height: 60px;
   margin: 0 auto;
-  overflow: hidden;
 }
 
 .Navbar-container h2{
@@ -49,7 +48,9 @@
 } */
 
 .Navbar-logo{
-  color: #1e7bed;
+width: 25vw;
+height: 4vw;
+margin-left: 0;
 }
 
 .login-button{
@@ -80,6 +81,15 @@
 
 .Ham{
   display: none;
+}
+
+.activee{
+  padding-left: 20px;
+}
+
+.Ham{
+  margin-left: -30px;
+  
 }
 
 @media all and (max-width:900px){
