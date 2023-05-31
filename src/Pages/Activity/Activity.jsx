@@ -45,7 +45,7 @@ function Activity() {
 
   const youngerRequest = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/younger');
+      const response = await fetch('https://dravet-syndrome.onrender.com/api/younger');
       const res = await response.json();
       setYoungerCards(res)
     } catch (err) {
@@ -56,7 +56,7 @@ function Activity() {
 
   const olderRequest = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/older');
+      const response = await fetch('https://dravet-syndrome.onrender.com/api/older');
       const res = await response.json();
       setOlderCards(res)
     } catch (err) {
@@ -68,7 +68,7 @@ function Activity() {
 
   const familyRequest = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/family');
+      const response = await fetch('https://dravet-syndrome.onrender.com/api/family');
       const res = await response.json();
       setFamilyCards(res)
     } catch (err) {

@@ -27,17 +27,17 @@ function NavbarDash() {
 
             <h2 className='Navbar-logo-dash'>LOGO</h2>
             <div className={show ? 'links_wrapper-dash nzale-dash' : 'links_wrapper-dash'}>
-                <NavLink to='/dashboard' onClick={() => setShow(false)}>Home</NavLink>
-                <NavLink to='/dashboard/overview' onClick={() => setShow(false)}>Get Informed</NavLink>
+                {/* <NavLink to='/dashboard' onClick={() => setShow(false)}>Home</NavLink>
+                <NavLink to='/dashboard/overview' onClick={() => setShow(false)}>Get Informed</NavLink> */}
                 <NavLink to='/dashboard/resource' onClick={() => setShow(false)}>Resources</NavLink>
                 <NavLink to='/dashboard/activity' onClick={() => setShow(false)}>Activities</NavLink>
-                <NavLink to='/dashboard/blog' onClick={() => setShow(false)}>Blogs</NavLink>
+                {/* <NavLink to='/dashboard/blog' onClick={() => setShow(false)}>Blogs</NavLink> */}
+                <NavLink to='/'>
                 <LogoutButton onClick={() => {
                     localStorage.clear();
-                    window.location.href = "/";
                 }}
                     startIcon={<ExitToAppIcon />}
-                    color="inherit" >Logout</LogoutButton>
+                    color="inherit" >Logout</LogoutButton></NavLink>
             </div>
             <button className='Ham-dash' onClick={openMenu}> <FaBars className='Ham-dash' /></button>
 

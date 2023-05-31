@@ -44,7 +44,7 @@ function ActivityDash() {
     form.append('cardTitle', cardTitleYounger);
     form.append('cardDescription', cardDescriptionYounger);
     try {
-      const response = await axios.put(`http://localhost:5000/api/younger/${openEditYounger.id}`, form,
+      const response = await axios.put(`https://dravet-syndrome.onrender.com/api/younger/${openEditYounger.id}`, form,
         {
           content: "application/json",
           headers: {
@@ -69,7 +69,7 @@ function ActivityDash() {
     form.append('cardTitle', cardTitleYounger);
     form.append('cardDescription', cardDescriptionYounger);
     try {
-      const response = await axios.post(`http://localhost:5000/api/younger`, form,
+      const response = await axios.post(`https://dravet-syndrome.onrender.com/api/younger`, form,
         {
           content: "application/json",
           headers: {
@@ -87,7 +87,7 @@ function ActivityDash() {
 
   const DeleteYounger = async (id) => {
     try {
-      const res = await axios.delete(`http://localhost:5000/api/younger/${openDeleteYounger.id}`,
+      const res = await axios.delete(`https://dravet-syndrome.onrender.com/api/younger/${openDeleteYounger.id}`,
         {
           content: "application/json",
           headers: {
@@ -127,7 +127,7 @@ function ActivityDash() {
     form.append('cardTitle', cardTitleOlder);
     form.append('cardDescription', cardDescriptionOlder);
     try {
-      const response = await axios.put(`http://localhost:5000/api/older/${openEditOlder.id}`, form,
+      const response = await axios.put(`https://dravet-syndrome.onrender.com/api/older/${openEditOlder.id}`, form,
         {
           content: "application/json",
           headers: {
@@ -152,7 +152,7 @@ function ActivityDash() {
     form.append('cardTitle', cardTitleOlder);
     form.append('cardDescription', cardDescriptionOlder);
     try {
-      const response = await axios.post(`http://localhost:5000/api/older`, form,
+      const response = await axios.post(`https://dravet-syndrome.onrender.com/api/older`, form,
         {
           content: "application/json",
           headers: {
@@ -170,7 +170,7 @@ function ActivityDash() {
 
   const DeleteOlder = async (id) => {
     try {
-      const res = await axios.delete(`http://localhost:5000/api/older/${openDeleteOlder.id}`,
+      const res = await axios.delete(`https://dravet-syndrome.onrender.com/api/older/${openDeleteOlder.id}`,
         {
           content: "application/json",
           headers: {
@@ -210,7 +210,7 @@ function ActivityDash() {
     form.append('cardTitle', cardTitleFamily);
     form.append('cardDescription', cardDescriptionFamily);
     try {
-      const response = await axios.put(`http://localhost:5000/api/family/${openEditFamily.id}`, form,
+      const response = await axios.put(`https://dravet-syndrome.onrender.com/api/family/${openEditFamily.id}`, form,
         {
           content: "application/json",
           headers: {
@@ -235,7 +235,7 @@ function ActivityDash() {
     form.append('cardTitle', cardTitleFamily);
     form.append('cardDescription', cardDescriptionFamily);
     try {
-      const response = await axios.post(`http://localhost:5000/api/family`, form,
+      const response = await axios.post(`https://dravet-syndrome.onrender.com/api/family`, form,
         {
           content: "application/json",
           headers: {
@@ -253,7 +253,7 @@ function ActivityDash() {
 
   const DeleteFamily = async (id) => {
     try {
-      const res = await axios.delete(`http://localhost:5000/api/family/${openDeleteFamily.id}`,
+      const res = await axios.delete(`https://dravet-syndrome.onrender.com/api/family/${openDeleteFamily.id}`,
         {
           content: "application/json",
           headers: {
@@ -297,7 +297,7 @@ function ActivityDash() {
 
   const youngerRequest = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/younger');
+      const response = await fetch('https://dravet-syndrome.onrender.com/api/younger');
       const res = await response.json();
       setYoungerCards(res)
     } catch (err) {
@@ -308,7 +308,7 @@ function ActivityDash() {
 
   const olderRequest = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/older');
+      const response = await fetch('https://dravet-syndrome.onrender.com/api/older');
       const res = await response.json();
       setOlderCards(res)
     } catch (err) {
@@ -320,7 +320,7 @@ function ActivityDash() {
 
   const familyRequest = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/family');
+      const response = await fetch('https://dravet-syndrome.onrender.com/api/family');
       const res = await response.json();
       setFamilyCards(res)
     } catch (err) {

@@ -107,25 +107,13 @@
   z-index: 3;
 }
 
-.advertisers-service-sec .service-card:hover:after {
-  top: 0%;
-}
-
-/* .service-card .icon-wrapper {
-    background-color: #ffffff;
-    color: rgb(255, 23, 131);
-  } */
-
-/* .advertisers-service-sec .service-card:hover .icon-wrapper {
-    color: #0dcaf0;
-  } */
 
 .advertisers-service-sec .service-card:hover h3 {
   color: black;
 }
 
 .advertisers-service-sec .service-card:hover p {
-  color: black;
+  color: #1e7bed;
 }
 
 .icon-wrapper img {

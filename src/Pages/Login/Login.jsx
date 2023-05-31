@@ -8,7 +8,7 @@ import { Navigate } from 'react-router';
 import axios from 'axios'
 
 async function loginUser(credentials) {
-  return fetch('http://localhost:5000/api/admin/login', {
+  return fetch('https://dravet-syndrome.onrender.com/api/admin/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -76,7 +76,7 @@ const Login = () => {
 
   const registerUser = async (userData) => {
     try {
-      const response = await axios.post('http://localhost:5000/api/admin', userData);
+      const response = await axios.post('https://dravet-syndrome.onrender.com/api/admin', userData);
       localStorage.setItem('token', response.data.token);
       localStorage.setItem('isAdmin', response.data.isAdmin);
       localStorage.setItem('loggedIn', 'true');

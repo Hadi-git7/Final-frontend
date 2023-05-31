@@ -36,7 +36,7 @@ function ResourceDash() {
     form.append('cardTitle', cardTitle);
     form.append('cardDescription', cardDescription);
     try {
-      const response = await axios.put(`http://localhost:5000/api/resource/${openEdit.id}`, form,
+      const response = await axios.put(`https://dravet-syndrome.onrender.com/api/resource/${openEdit.id}`, form,
         {
           content: "application/json",
           headers: {
@@ -58,7 +58,7 @@ function ResourceDash() {
     form.append('cardTitle', cardTitle);
     form.append('cardDescription', cardDescription);
     try {
-      const response = await axios.post(`http://localhost:5000/api/resource`, form,
+      const response = await axios.post(`https://dravet-syndrome.onrender.com/api/resource`, form,
         {
           content: "application/json",
           headers: {
@@ -76,7 +76,7 @@ function ResourceDash() {
 
   const DeleteCard = async (id) => {
     try {
-      const res = await axios.delete(`http://localhost:5000/api/resource/${openDelete.id}`,
+      const res = await axios.delete(`https://dravet-syndrome.onrender.com/api/resource/${openDelete.id}`,
         {
           content: "application/json",
           headers: {
@@ -96,7 +96,7 @@ function ResourceDash() {
 
   const Request = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/resource');
+      const response = await fetch('https://dravet-syndrome.onrender.com/api/resource');
       const res = await response.json();
       setResource(res)
       console.log(res)

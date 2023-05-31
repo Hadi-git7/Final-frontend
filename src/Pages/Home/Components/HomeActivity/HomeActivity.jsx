@@ -10,7 +10,7 @@ function HomeActivity() {
 
   const Request = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/younger');
+      const response = await fetch('https://dravet-syndrome.onrender.com/api/younger');
       const res = await response.json();
       setActivity(res);
     } catch (err) {

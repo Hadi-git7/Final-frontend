@@ -24,7 +24,7 @@ function Navbar() {
             <NavLink to='/overview' onClick={()=>setShow(false)}>Get Informed</NavLink>
             <NavLink to='/resource' onClick={()=>setShow(false)}>Caregivers</NavLink>
             <NavLink to='/activity' onClick={()=>setShow(false)}>Activities</NavLink>
-            <NavLink to='/blog' onClick={()=>setShow(false)}>Blogs</NavLink>
+            {/* <NavLink to='/blog' onClick={()=>setShow(false)}>Blogs</NavLink> */}
             <button className='login-button'onClick={navDeactive}>LogIn</button>
         </div>
         <button className='Ham'  onClick={openMenu}> <FaBars className='Ham'/></button>

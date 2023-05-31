@@ -1,0 +1,28 @@
+.blog-container{
+    height: 30vh;
+    text-align: center;
+    padding: 15vw;
+    background-image: url(dsfffff.jpg);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    font-size: 1.3rem;
+    position: relative;
+}
+
+.blog-container::before{
+    content: '';
+    position: absolute;
+    z-index: 1;
+    background-color: rgb(0 0 0 / 58%);
+    inset: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.for-color{
+    color: white;
+    z-index: 10;
+}

@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 60px;
+  height: 70px;
   margin: 0 auto;
 }
 
@@ -115,7 +115,7 @@ margin-left: 0;
     z-index: -2;
     transition: .4s all ease;
     top: 100%;
-    background-color: rgb(85, 77, 77);
+    background-color: #ebf6fa;
     padding:20px 0 20px 0;
   }
 
@@ -131,4 +131,10 @@ margin-left: 0;
     background-color: transparent;
     
   }
+
+  .Navbar-logo{
+    width: 280px;
+    height: 70px;
+  }
 }
+

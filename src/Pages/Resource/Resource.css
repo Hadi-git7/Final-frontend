@@ -50,7 +50,7 @@
     min-height: 300px;
     max-width: 400px;
     width: 100%;
-    margin-top: 0px ;
+    margin-top: 40px ;
     border: #e6e6e6 solid 2px;
     box-shadow: rgba(73, 73, 73, 0.25) 0px 25px 50px -12px,rgba(102, 101, 101, 0.25) -20px 0px 36px -28px inset;
     background-color: white;
@@ -67,4 +67,84 @@
 
   .resource-description-p{
     font-size: 1.1rem;
+  }
+
+  @media screen and (max-width:1000px){
+    .hero-resource-content-p {
+        padding: 0;
+        text-align: center;
+        font-size: 0.8rem;
+    
+    }
+    
+    .hero-resource-content-h2 {
+        border-bottom: 2px solid #ff9a43;
+        padding-bottom: 1rem;
+        font-size: 1rem;
+
+        /* Adjust the value to increase or decrease the space */
+    
+    }
+}
+
+@media screen and (max-width:800px){
+    .hero-resource-container {
+        flex-direction: column;
+        height: auto;
+        position: relative;
+    }
+    .hero-resource-image,
+    .hero-resource-content {
+        width: 100%;
+        min-height: 45vh;
+    }
+
+    .hero-resource-image{
+        position: relative;
+    }
+
+    .hero-resource-image img{
+        object-fit: cover;
+        height: 100%;
+        position: absolute;
+        inset: 0;
+    }
+
+    .hero-resource-content {
+        position: absolute;
+        top: 50%;
+        background-color: rgba(0, 0, 0, 0.5);
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .hero-resource-content-h2{
+        font-size: 2rem;
+    }
+
+    .hero-resource-content-p{
+        font-size: 1.2rem;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:500px){
+
+    .hero-resource-content-h2{
+        font-size: 1.4rem;
+    }
+
+    .hero-resource-content-p{
+        font-size: 0.9rem;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:600px){
+    .resource-card-page {
+      width: 320px;
+  }
+  .resource-description {
+    padding: 4vw 9vw;
+}
   }

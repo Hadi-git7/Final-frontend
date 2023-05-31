@@ -9,6 +9,8 @@ import Overview from './Pages/Overview/Overview'
 import Login from './Pages/Login/Login'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import Dashboard from './Pages/Dashboard/Dashboard';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import 'aos/dist/aos.css'
 
 function App() {
   return (

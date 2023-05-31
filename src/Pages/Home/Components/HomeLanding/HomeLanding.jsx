@@ -7,7 +7,7 @@ function HomeLanding() {
 
   const Request = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/home');
+      const response = await fetch('https://dravet-syndrome.onrender.com/api/home');
       const res = await response.json();
       setLanding(res);
     } catch (err) {

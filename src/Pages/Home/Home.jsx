@@ -12,8 +12,9 @@ function Home() {
     <>
    <HomeLanding />
    <HomeActivity />
-   <HomeResource />
    <HomeBlog />
+
+   <HomeResource />
    </>
   )
 }

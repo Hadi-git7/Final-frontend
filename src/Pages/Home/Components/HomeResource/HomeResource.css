@@ -61,6 +61,10 @@
     font-size: 15px;
 }
 
+.resource-card-description  a{
+  text-decoration: none;
+}
+
 
 
 #fontsize{
@@ -305,3 +309,8 @@
     align-items : center ;
   }
   
+  @media screen and (max-width:600px){
+    .resource-card {
+      width: 320px;
+  }
+  }

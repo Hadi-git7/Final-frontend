@@ -136,8 +136,8 @@
 }
 
 .footer-logo{
-  width: 14vw;
-  height: 3vw;
+  width: 250px;
+  height: 60px;
 }
 
 
@@ -169,4 +169,16 @@
     width: 50%;
     margin: 0 auto;
   }
+}
+
+
+@media  screen and (max-width:600px) {
+  .footer-left,
+  .footer-right,
+  .footer-middle {
+    width: 100%;
+ 
+  }
+
+
 }
