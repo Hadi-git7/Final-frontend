@@ -31,7 +31,7 @@ function HomeBlog() {
         <Slider {...carouselSettings} className='for-color'>
           {quotes.map((quote, index) => (
             <div key={index} >
-              <p className=""> “{quote}”</p>
+              <p className="blog-p"> “{quote}”</p>
             </div>
           ))}
         </Slider>  

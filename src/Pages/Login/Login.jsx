@@ -100,7 +100,12 @@ const Login = () => {
 
 
   if (isLoggedIn) {
+    const isAdmin = localStorage.getItem('isAdmin') === 'true';
+    if (isAdmin) {
       return <Navigate to="/dashboard/" />;
+    } else {
+      return <Navigate to="/" />;
+    }
   }
 
   
@@ -149,8 +154,7 @@ const Login = () => {
           <div className="content">
             <h3>New here ?</h3>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
-              ex ratione. Aliquid!
+             Sign Up to be a part of our Dravet Syndrome Community!! Just Add your Email and Choose a password for yourself.
             </p>
             <button className="btn transparent" onClick={handleSignUpClick}>
               Sign up
@@ -162,8 +166,7 @@ const Login = () => {
           <div className="content">
             <h3>One of us ?</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-              laboriosam ad deleniti.
+             If you're an admin , add your email and password to login and edit the Website!
             </p>
             <button className="btn transparent" onClick={handleSignInClick}>
               Sign in

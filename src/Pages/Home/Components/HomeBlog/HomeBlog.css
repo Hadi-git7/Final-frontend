@@ -26,3 +26,10 @@
     color: white;
     z-index: 10;
 }
+
+
+@media screen and (max-width:500px) {
+    .blog-container{
+        height: 35vh;
+    }
+}
