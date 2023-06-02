@@ -280,7 +280,7 @@ function ResourceDash() {
 
 
         <div className='resource-div-button'>
-          <NavLink to='/resource'>
+          <NavLink to='/dashboard/resource'>
             <button className='resource-button'>
               <div className='resource-button__line'></div>
               <div className='resource-button__line'></div>
