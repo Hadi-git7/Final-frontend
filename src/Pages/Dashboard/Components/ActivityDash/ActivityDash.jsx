@@ -8,7 +8,8 @@ import EditIcon from '@mui/icons-material/Edit';
 import AddIcon from '@mui/icons-material/Add';
 import Dialog from '@mui/material/Dialog';
 import axios from "axios";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function ActivityDash() {
 
@@ -58,8 +59,11 @@ function ActivityDash() {
       setCardImageYounger('')
       youngerRequest();
       setOpenEditYounger(!openEditYounger.toggle)
+      toast.success('Updated successfully!');
+
     } catch (err) {
       console.log(err)
+      toast.error('Error while updating!');
     }
   }
 
@@ -80,8 +84,12 @@ function ActivityDash() {
       console.log(res)
       youngerRequest();
       setOpenAddYounger(!openAddYounger.toggle)
+      toast.success('Card added successfully!');
+
     } catch (err) {
       console.log(err)
+      toast.error('Invalid data!');
+
     }
   }
 
@@ -99,9 +107,12 @@ function ActivityDash() {
       console.log(response);
       youngerRequest();
       setOpenDeleteYounger(!openDeleteYounger.toggle)
+      toast.success('Deleted successfully!');
 
     } catch (err) {
       console.log(err);
+      toast.error('Error while deleting!');
+
     }
   }
 
@@ -141,8 +152,12 @@ function ActivityDash() {
       setCardImageOlder('')
       olderRequest();
       setOpenEditOlder(!openEditOlder.toggle)
+      toast.success('Updated successfully!');
+
     } catch (err) {
       console.log(err)
+      toast.error('Error while updating!');
+
     }
   }
 
@@ -163,8 +178,12 @@ function ActivityDash() {
       console.log(res)
       olderRequest();
       setOpenAddOlder(!openAddOlder.toggle)
+      toast.success('Card added successfully!');
+
     } catch (err) {
       console.log(err)
+      toast.error('Invalid data!');
+
     }
   }
 
@@ -182,9 +201,12 @@ function ActivityDash() {
       console.log(response);
       olderRequest();
       setOpenDeleteOlder(!openDeleteOlder.toggle)
+      toast.success('Deleted successfully!');
 
     } catch (err) {
       console.log(err);
+      toast.error('Error while deleting!');
+
     }
   }
 
@@ -224,8 +246,12 @@ function ActivityDash() {
       setCardImageFamily('')
       familyRequest();
       setOpenEditFamily(!openEditFamily.toggle)
+      toast.success('Updated successfully!');
+
     } catch (err) {
       console.log(err)
+      toast.error('Error while updating!');
+
     }
   }
 
@@ -246,8 +272,12 @@ function ActivityDash() {
       console.log(res)
       familyRequest();
       setOpenAddFamily(!openAddFamily.toggle)
+      toast.success('Card added successfully!');
+
     } catch (err) {
       console.log(err)
+      toast.error('Invalid data!');
+
     }
   }
 
@@ -265,9 +295,12 @@ function ActivityDash() {
       console.log(response);
       familyRequest();
       setOpenDeleteFamily(!openDeleteFamily.toggle)
+      toast.success('Deleted successfully!');
 
     } catch (err) {
       console.log(err);
+      toast.error('Error while deleting!');
+
     }
   }
 
@@ -338,6 +371,8 @@ function ActivityDash() {
 
   return (
     <section id="advertisers" className="advertisers-service-sec pt-5 pb-5">
+            <ToastContainer position="bottom-right" />
+
       <div className="container">
         <div className="row">
           <div className="section-header text-center">

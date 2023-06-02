@@ -9,7 +9,8 @@ import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import EditIcon from '@mui/icons-material/Edit';
 import AddIcon from '@mui/icons-material/Add';
 import Dialog from '@mui/material/Dialog';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -47,8 +48,12 @@ function ResourceDash() {
       console.log(res)
       Request();
       setOpenEdit(!openEdit.toggle)
+      toast.success('Updated successfully!');
+
     } catch (err) {
       console.log(err)
+      toast.error('Error while updating!');
+
     }
   }
 
@@ -69,8 +74,12 @@ function ResourceDash() {
       console.log(res)
       Request();
       setOpenAdd(!openAdd.toggle)
+      toast.success('Card added successfully!');
+
     } catch (err) {
       console.log(err)
+      toast.error('Invalid data!');
+
     }
   }
 
@@ -88,9 +97,12 @@ function ResourceDash() {
       console.log(response);
       Request();
       setOpenDelete(!openDelete.toggle)
+      toast.success('Deleted successfully!');
 
     } catch (err) {
       console.log(err);
+      toast.error('Error while deleting!');
+
     }
   }
 
@@ -113,6 +125,8 @@ function ResourceDash() {
 
   return (
     <div className="homeresource-container-dash">
+      <ToastContainer position="bottom-right" />
+
       <h1 className='resources-title-dash' data-aos="fade-down" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="800">Resources</h1>
       <button
         className="add-button-resource"
@@ -137,26 +151,26 @@ function ResourceDash() {
               <div className="resource-card-description-dash">
                 <h4 id='fontsize-dash'>{obj.cardDescription}</h4>
               </div>
-                <button
-                  className="delete-button-resource"
-                  onClick={() => {
-                    setOpenDelete({ toggle: true, id: obj._id });
-                  }}
-                >
-                  <DeleteForeverIcon />
-                </button>
+              <button
+                className="delete-button-resource"
+                onClick={() => {
+                  setOpenDelete({ toggle: true, id: obj._id });
+                }}
+              >
+                <DeleteForeverIcon />
+              </button>
 
-                <button
-                  className="edit-button-resource"
-                  onClick={() => {
-                    setOpenEdit({ toggle: true, id: obj._id });
-                    setCardTitle(obj.cardTitle);
-                    setCardDescription(obj.cardDescription);
-                    setCardImage(obj.cardImage);
-                  }}
-                >
-                  <EditIcon />
-                </button>
+              <button
+                className="edit-button-resource"
+                onClick={() => {
+                  setOpenEdit({ toggle: true, id: obj._id });
+                  setCardTitle(obj.cardTitle);
+                  setCardDescription(obj.cardDescription);
+                  setCardImage(obj.cardImage);
+                }}
+              >
+                <EditIcon />
+              </button>
             </div>
           );
         })}

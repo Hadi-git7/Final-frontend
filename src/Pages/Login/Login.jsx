@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Login.css'
 import Navbar from '../../Components/Navbar/Navbar';
 import useToken from './useToken';
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Navigate } from 'react-router';
 import axios from 'axios'
@@ -66,8 +66,9 @@ const Login = () => {
       localStorage.setItem('token', response.token);
       localStorage.setItem('isAdmin', response.isAdmin);
       localStorage.setItem('loggedIn', 'true');
-      toast.success('Logged in successfully!');
       setIsLoggedIn(true);
+      toast.success('Logged in successfully!');
+
     } catch (error) {
       console.error('Error:', error);
       toast.error('Wrong Username or Password!!');
@@ -113,6 +114,8 @@ const Login = () => {
   return (
     <>
     <Navbar />
+    <ToastContainer  position="bottom-right" />
+
     <div className={`login-container ${isSignUpMode ? 'sign-up-mode' : ''}`}>
       <div className="forms-container">
         <div className="signin-signup">
