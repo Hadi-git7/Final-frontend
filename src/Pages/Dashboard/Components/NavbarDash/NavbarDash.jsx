@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './NavbarDash.css'
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { FaBars } from "react-icons/fa";
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import { Button } from "@mui/material";
@@ -8,6 +8,7 @@ import { styled } from '@mui/material/styles';
 
 
 function NavbarDash() {
+    const navigate = useNavigate()
     const [show, setShow] = useState(false)
 
     const LogoutButton = styled(Button)({
@@ -32,12 +33,13 @@ function NavbarDash() {
                 <NavLink to='/dashboard/resource' onClick={() => setShow(false)}>Resources</NavLink>
                 <NavLink to='/dashboard/activity' onClick={() => setShow(false)}>Activities</NavLink>
                 {/* <NavLink to='/dashboard/blog' onClick={() => setShow(false)}>Blogs</NavLink> */}
-                <NavLink to='/'>
+               
                 <LogoutButton onClick={() => {
                     localStorage.clear();
+                    navigate('/')
                 }}
                     startIcon={<ExitToAppIcon />}
-                    color="inherit" >Logout</LogoutButton></NavLink>
+                    color="inherit" >Logout</LogoutButton>
             </div>
             <button className='Ham-dash' onClick={openMenu}> <FaBars className='Ham-dash' /></button>
 
