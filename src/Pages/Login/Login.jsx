@@ -102,7 +102,7 @@ const Login = () => {
   if (isLoggedIn) {
     const isAdmin = localStorage.getItem('isAdmin') === 'true';
     if (isAdmin) {
-      return <Navigate to="/dashboard/" />;
+      return <Navigate to="/dashboard/resource" />;
     } else {
       return <Navigate to="/" />;
     }
