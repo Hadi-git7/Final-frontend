@@ -4,10 +4,16 @@ import { NavLink } from 'react-router-dom';
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import 'aos/dist/aos.css'
 import logo from '../Navbar/Dravet Syndrome.png'
+import {animateScroll} from 'react-scroll';
 
 
 
 function Footer() {
+
+  const handleLinkClick = () => {
+    animateScroll.scrollToTop();
+  }
+
   return (
     <div className='footer-container'>
       <div className="footer-left" data-aos="fade-down"
@@ -30,7 +36,7 @@ function Footer() {
           <NavLink className='footer-links' to='/blog'>Blogs</NavLink>
         </div>
         <div className='login-button-footer'>
-        <NavLink to='login'><button >Login</button></NavLink> 
+        <NavLink to='login'><button onClick={handleLinkClick}>Login</button></NavLink> 
         </div>
       </div>
 
@@ -42,9 +48,9 @@ function Footer() {
       <h3 className='rm-title'>Show some love</h3>
       <p className='footer-right-p'>Love knows no bounds, and even the smallest donations towards people with Dravet syndrome can bring immeasurable joy to their hearts</p>
       <br/>
-      <div className='donate-button-footer'>
+      {/* <div className='donate-button-footer'>
          <button >Donate</button>
-      </div>
+      </div> */}
       </div>
 
     </div>

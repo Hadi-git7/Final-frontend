@@ -4,6 +4,7 @@ import '../../../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import 'aos/dist/aos.css';
 import { NavLink } from 'react-router-dom';
 import Aos from 'aos';
+import {animateScroll} from 'react-scroll';
 
 function HomeActivity() {
   const [activity, setActivity] = useState([]);
@@ -17,6 +18,10 @@ function HomeActivity() {
       console.log(err);
     }
   };
+
+  const handleLinkClick = () => {
+    animateScroll.scrollToTop();
+  }
 
   useEffect(() => {
     Request();
@@ -57,7 +62,7 @@ function HomeActivity() {
         </div>
         <div className="activity-div-button">
           <NavLink to="/activity">
-            <button className="activity-button">
+            <button className="activity-button" onClick={handleLinkClick}>
               <div className="activity-button__line"></div>
               <div className="activity-button__line"></div>
               <span className="activity-button__text">SHOW MORE</span>

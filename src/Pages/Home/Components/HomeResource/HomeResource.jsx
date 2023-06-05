@@ -7,11 +7,15 @@ import { NavLink } from 'react-router-dom';
 import res1 from '../../../Resource/res1.png'
 import financial from '../../../Resource/financial.png'
 import medical from '../../../Resource/medical.png'
+import {animateScroll} from 'react-scroll';
 
 
 function HomeResource() {
 
 
+  const handleLinkClick = () => {
+    animateScroll.scrollToTop();
+  }
 
   useEffect(() => {
     Aos.init();
@@ -84,8 +88,8 @@ function HomeResource() {
 
 
         <div className='resource-div-button'>
-          <NavLink to='/resource'>
-            <button className='resource-button'>
+          <NavLink to='/resource' >
+            <button className='resource-button' onClick={handleLinkClick} >
               <div className='resource-button__line'></div>
               <div className='resource-button__line'></div>
               <span className='resource-button__text'>SHOW MORE</span>
