@@ -48,9 +48,9 @@ function Footer() {
       <h3 className='rm-title'>Show some love</h3>
       <p className='footer-right-p'>Love knows no bounds, and even the smallest donations towards people with Dravet syndrome can bring immeasurable joy to their hearts</p>
       <br/>
-      {/* <div className='donate-button-footer'>
+      <div className='donate-button-footer'>
          <button >Donate</button>
-      </div> */}
+      </div>
       </div>
 
     </div>
