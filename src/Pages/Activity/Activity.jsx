@@ -4,9 +4,11 @@ import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import 'aos/dist/aos.css'
 import Aos from 'aos';
 import activity from './activityy-dsff.jpg'
+import Loader from '..//Loader/Loader'
 
 
 function Activity() {
+  const [loading, setIsLoading] = useState(true);
 
   const [youngerCards, setYoungerCards] = useState([]);
   const [olderCards, setOlderCards] = useState([]);
@@ -18,6 +20,11 @@ function Activity() {
   const [visibleFamily, setVisibleFamily] = useState(3);
   const [showFamily, setShowFamily] = useState(false);
 
+  useEffect(()=>{
+    setTimeout(()=>{
+    setIsLoading(false)
+    },3000)
+  })
 
   const showMoreYounger = () => {
     if (!showYounger) {
@@ -83,7 +90,10 @@ function Activity() {
     familyRequest();
     Aos.init();
   }, [])
-
+  
+  if(loading){
+    return <Loader/>
+  }
   return (
     <section id="advertisers" className="advertisers-service-sec pt-5 pb-5">
       <div className="container">

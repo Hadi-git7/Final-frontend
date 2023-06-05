@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Resource.css'
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import 'aos/dist/aos.css'
@@ -11,15 +11,27 @@ import international from './international.png'
 import medical from './medical.png'
 import seizure from './seizure.png'
 import Aos from 'aos';
+import Loader from '../Loader/Loader'
+
 function Resource() {
+
+  const [loading, setIsLoading] = useState(true);
 
 
   useEffect(()=>{
     Aos.init();
   })
 
+  useEffect(()=>{
+    setTimeout(()=>{
+    setIsLoading(false)
+    },3000)
+  })
 
 
+  if(loading){
+    return <Loader/>
+  }
   return (
     <div className="resource-container">
       <div className='hero-resource-container'>
