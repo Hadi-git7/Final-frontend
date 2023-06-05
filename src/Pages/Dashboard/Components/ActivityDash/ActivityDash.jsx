@@ -371,7 +371,7 @@ function ActivityDash() {
 
   return (
     <section id="advertisers" className="advertisers-service-sec pt-5 pb-5">
-            <ToastContainer position="bottom-right" />
+      <ToastContainer position="bottom-right" />
 
       <div className="container">
         <div className="row">
@@ -440,16 +440,17 @@ function ActivityDash() {
                   </div>)
               })}
 
-
-            {openDeleteYounger.toggle &&
-              <Dialog open={openDeleteYounger.toggle} onClose={() => setOpenDeleteYounger(!openDeleteYounger.toggle)}>
-                <div>
-                  <p>Are you sure you want to delete?</p>
-                  <button onClick={DeleteYounger}>Delete</button>
-                  <button onClick={() => setOpenDeleteYounger(!openDeleteYounger.toggle)}>Cancel</button>
+            {openDeleteYounger.toggle && (
+              <Dialog open={openDeleteYounger.toggle} onClose={() => setOpenDeleteOlder(!openDeleteYounger.toggle)}>
+                <div className="dialog-content">
+                  <p className="dialog-message">Are you sure you want to delete?</p>
+                  <button className="dialog-button" onClick={DeleteOlder}>Delete</button>
+                  <button className="dialog-button" onClick={() => setOpenDeleteYounger(!openDeleteYounger.toggle)}>Cancel</button>
                 </div>
               </Dialog>
-            }
+            )}
+
+
             {openEditYounger.toggle && (
               <Dialog open={openEditYounger.toggle} onClose={() => setOpenEditYounger(!openEditYounger.toggle)}>
                 <div className="popup-form">
@@ -615,15 +616,16 @@ function ActivityDash() {
 
 
 
-            {openDeleteOlder.toggle &&
+            {openDeleteOlder.toggle && (
               <Dialog open={openDeleteOlder.toggle} onClose={() => setOpenDeleteOlder(!openDeleteOlder.toggle)}>
-                <div>
-                  <p>Are you sure you want to delete?</p>
-                  <button onClick={DeleteOlder}>Delete</button>
-                  <button onClick={() => setOpenDeleteOlder(!openDeleteOlder.toggle)}>Cancel</button>
+                <div className="dialog-content">
+                  <p className="dialog-message">Are you sure you want to delete?</p>
+                  <button className="dialog-button" onClick={DeleteOlder}>Delete</button>
+                  <button className="dialog-button" onClick={() => setOpenDeleteOlder(!openDeleteOlder.toggle)}>Cancel</button>
                 </div>
               </Dialog>
-            }
+            )}
+
             {openEditOlder.toggle && (
               <Dialog open={openEditOlder.toggle} onClose={() => setOpenEditOlder(!openEditOlder.toggle)}>
                 <div className="popup-form">
@@ -790,15 +792,16 @@ function ActivityDash() {
                   </div>)
               })}
 
-            {openDeleteFamily.toggle &&
+            {openDeleteFamily.toggle && (
               <Dialog open={openDeleteFamily.toggle} onClose={() => setOpenDeleteFamily(!openDeleteFamily.toggle)}>
-                <div>
-                  <p>Are you sure you want to delete?</p>
-                  <button onClick={DeleteFamily}>Delete</button>
-                  <button onClick={() => setOpenDeleteFamily(!openDeleteFamily.toggle)}>Cancel</button>
+                <div className="dialog-content">
+                  <p className="dialog-message">Are you sure you want to delete?</p>
+                  <button className="dialog-button" onClick={DeleteOlder}>Delete</button>
+                  <button className="dialog-button" onClick={() => setOpenDeleteFamily(!openDeleteFamily.toggle)}>Cancel</button>
                 </div>
               </Dialog>
-            }
+            )}
+
             {openEditFamily.toggle && (
               <Dialog open={openEditFamily.toggle} onClose={() => setOpenEditFamily(!openEditFamily.toggle)}>
                 <div className="popup-form">

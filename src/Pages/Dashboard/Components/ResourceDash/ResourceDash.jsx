@@ -174,15 +174,15 @@ function ResourceDash() {
             </div>
           );
         })}
-        {openDelete.toggle &&
-          <Dialog open={openDelete.toggle} onClose={() => setOpenDelete(!openDelete.toggle)}>
-            <div>
-              <p>Are you sure you want to delete?</p>
-              <button onClick={DeleteCard}>Delete</button>
-              <button onClick={() => setOpenDelete(!openDelete.toggle)}>Cancel</button>
-            </div>
-          </Dialog>
-        }
+          {openDelete.toggle && (
+              <Dialog open={openDelete.toggle} onClose={() => setOpenDelete(!openDelete.toggle)}>
+                <div className="dialog-content">
+                  <p className="dialog-message">Are you sure you want to delete?</p>
+                  <button className="dialog-button" onClick={DeleteCard}>Delete</button>
+                  <button className="dialog-button" onClick={() => setOpenDelete(!openDelete.toggle)}>Cancel</button>
+                </div>
+              </Dialog>
+            )}
         {openEdit.toggle && (
           <Dialog open={openEdit.toggle} onClose={() => setOpenEdit(!openEdit.toggle)}>
             <div className="popup-form">

@@ -1,0 +1,23 @@
+.dialog-content {
+    padding: 20px;
+  }
+  
+  .dialog-message {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .dialog-button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 4px;
+    background-color: #ff9a43;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dialog-button:hover {
+    background-color: #db7720;
+  }
+  
