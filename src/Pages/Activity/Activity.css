@@ -46,3 +46,20 @@
     margin: 0 auto;
   }
   
+  @media screen and (max-width:680px) {
+      
+  .activity-img img {
+    height: 35vw;
+    width: 60vw;
+   
+  }
+  }
+
+  @media screen and (max-width:480px) {
+      
+    .activity-img img {
+      height: 40vw;
+      width: 70vw;
+     
+    }
+    }
