@@ -1,16 +1,30 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Overview.css';
 import tryy from './try.png';
 import graph from './ds-graph.jpg'
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import 'aos/dist/aos.css'
 import Aos from 'aos';
+import Loader from '../Loader/Loader'
 
 
 function Overview() {
+
+  const [loading, setIsLoading] = useState(true);
+
+  useEffect(()=>{
+    setTimeout(()=>{
+    setIsLoading(false)
+    },3000)
+  })
+
   useEffect(() => {
     Aos.init();
   }, [])
+
+  if(loading){
+    return <Loader/>
+  }
   return (
     <>
       <div className='overview-container'>
