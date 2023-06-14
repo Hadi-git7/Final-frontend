@@ -444,7 +444,7 @@ function ActivityDash() {
               <Dialog open={openDeleteYounger.toggle} onClose={() => setOpenDeleteOlder(!openDeleteYounger.toggle)}>
                 <div className="dialog-content">
                   <p className="dialog-message">Are you sure you want to delete?</p>
-                  <button className="dialog-button" onClick={DeleteOlder}>Delete</button>
+                  <button className="dialog-button" onClick={DeleteYounger}>Delete</button>
                   <button className="dialog-button" onClick={() => setOpenDeleteYounger(!openDeleteYounger.toggle)}>Cancel</button>
                 </div>
               </Dialog>
@@ -796,7 +796,7 @@ function ActivityDash() {
               <Dialog open={openDeleteFamily.toggle} onClose={() => setOpenDeleteFamily(!openDeleteFamily.toggle)}>
                 <div className="dialog-content">
                   <p className="dialog-message">Are you sure you want to delete?</p>
-                  <button className="dialog-button" onClick={DeleteOlder}>Delete</button>
+                  <button className="dialog-button" onClick={DeleteFamily}>Delete</button>
                   <button className="dialog-button" onClick={() => setOpenDeleteFamily(!openDeleteFamily.toggle)}>Cancel</button>
                 </div>
               </Dialog>
